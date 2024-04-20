@@ -18,7 +18,7 @@ return new class extends Migration
             $table->boolean('verified')->default(false);
             $table->boolean('blocked')->default(false);
 
-            $table->string('type')->unique();
+            $table->string('type');
 
             $table->string('email')->unique();
             $table->string('firstName')->nullable();

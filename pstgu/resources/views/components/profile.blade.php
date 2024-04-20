@@ -25,9 +25,9 @@
     {{ __('Пока нет отзывов.') }}
 </p>
 @else
-<ul class="list-unstyled">
+<ul class="list-group list-group-flush">
     @foreach($feedbacks as $feed)
-    <li>
+    <li class="list-group-item py-3">
         <p class="mb-2">
             {{ $feed->rating }}/5
         </p>
