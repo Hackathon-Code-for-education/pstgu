@@ -20,8 +20,24 @@
 <h2>
     {{ __('Отзывы') }}
 </h2>
-<ul>
+@if(count($feedbacks) == 0)
+<p>
+    {{ __('Пока нет отзывов.') }}
+</p>
+@else
+<ul class="list-unstyled">
+    @foreach($feedbacks as $feed)
     <li>
-        демонстрация
+        <p class="mb-2">
+            {{ $feed->rating }}/5
+        </p>
+        <p class="mb-0 fw-bold">
+            {{ $feed->title }}
+        </p>
+        <p>
+            {{ $feed->desc }}
+        </p>
     </li>
+    @endforeach
 </ul>
+@endif

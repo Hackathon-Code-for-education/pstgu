@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Feedback;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -20,9 +21,12 @@ class UserRouteController extends Controller
 
         $profileType = $types[$profile->type] ?? "<?>";
 
+        $feedbacks = Feedback::where('active', 1)->where('user', $profile->id)->get();
+
         return view('user.index', [
             'profile' => $profile,
             'profileType' => $profileType,
+            'feedbacks' => $feedbacks,
         ]);
     }
 }
