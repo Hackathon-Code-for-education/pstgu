@@ -10,4 +10,14 @@ class MainRouteController extends Controller
     {
         return view('main.index');
     }
+
+    public function about()
+    {
+        return view('main.about');
+    }
+
+    public function faq()
+    {
+        return view('main.faq');
+    }
 }

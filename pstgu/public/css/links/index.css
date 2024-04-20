@@ -1,0 +1,28 @@
+a {
+    color: var(--text-color) !important;
+    text-decoration-thickness: .05rem !important;
+    text-underline-offset: .3rem;
+    text-decoration-color: #ccc !important;
+    transition: 0s !important;
+}
+
+a:is(:focus, :focus-within, :focus-visible) {
+    color: #0d6efd !important;
+    text-decoration: none;
+}
+
+/* media */
+
+@media(hover: hover) {
+    a:hover {
+        color: #0d6efd !important;
+        text-decoration-color: #0d6efd !important;
+    }
+}
+
+@media(hover: none) {
+    a:active {
+        color: #0d6efd !important;
+        text-decoration-color: #0d6efd !important;
+    }
+}

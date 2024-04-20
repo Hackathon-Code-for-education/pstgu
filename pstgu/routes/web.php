@@ -12,22 +12,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->group(function () {
     Route::get('', [MainRouteController::class, 'index'])->name('main');
+    Route::get('about', [MainRouteController::class, 'about'])->name('main.about');
+    Route::get('faq', [MainRouteController::class, 'faq'])->name('main.faq');
 });
 
 //
 // AUTH
 //
 
-Route::get('signin', [LoginController::class, 'index'])->name('main');
-Route::post('signin', [LoginController::class, 'store'])->name('main');
+Route::get('signin', [LoginController::class, 'index'])->name('signin');
+Route::post('signin', [LoginController::class, 'store'])->name('signin.store');
 
-Route::get('signup', [RegisterController::class, 'index'])->name('main');
-Route::post('signup', [RegisterController::class, 'store'])->name('main');
+Route::get('signup', [RegisterController::class, 'index'])->name('signup');
+Route::post('signup', [RegisterController::class, 'store'])->name('signup.store');
 
 //
 // ACCOUNT
 //
 
 Route::prefix('user')->middleware([AuthUserMiddleware::class])->group(function () {
-    Route::get('', [MainRouteController::class, 'index'])->name('main');
+    Route::get('', [MainRouteController::class, 'index'])->name('user');
 });
