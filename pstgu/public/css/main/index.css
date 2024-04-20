@@ -4,9 +4,6 @@
 }
 
 @media(min-width: 767.98px) {
-    .main-second-col h2 {
-        text-align: center;
-    }
 
     .main-second-col {
         margin-left: 20%;
@@ -15,6 +12,6 @@
 
     .main-second-col.main-second-col-short {
         margin-left: 30%;
-        margin-right: 30%;
+        /* margin-right: 30%; */
     }
 }

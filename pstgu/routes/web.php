@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\VerifiedController;
 use App\Http\Controllers\MainRouteController;
 use App\Http\Middleware\AuthUserMiddleware;
+use App\Http\Middleware\GuestMiddleware;
 use Illuminate\Support\Facades\Route;
 
 //
@@ -20,11 +22,15 @@ Route::prefix('/')->group(function () {
 // AUTH
 //
 
-Route::get('signin', [LoginController::class, 'index'])->name('signin');
-Route::post('signin', [LoginController::class, 'store'])->name('signin.store');
+Route::get('verified', [VerifiedController::class, 'index'])->name('verified');
 
-Route::get('signup', [RegisterController::class, 'index'])->name('signup');
-Route::post('signup', [RegisterController::class, 'store'])->name('signup.store');
+Route::middleware([GuestMiddleware::class])->group(function () {
+    Route::get('signin', [LoginController::class, 'index'])->name('signin');
+    Route::post('signin', [LoginController::class, 'store'])->name('signin.store');
+
+    Route::get('signup', [RegisterController::class, 'index'])->name('signup');
+    Route::post('signup', [RegisterController::class, 'store'])->name('signup.store');
+});
 
 //
 // ACCOUNT

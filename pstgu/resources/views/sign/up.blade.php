@@ -5,27 +5,35 @@
     {{ __('Регистрация') }}
 </h1>
 
+<x-error />
+
 <div class="form-floating">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}" required>
     <label for="floatingInput">
         {{ __('Почта') }}
     </label>
 </div>
 
 <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" value="{{ old('password') }}" required>
     <label for="floatingPassword">
         {{ __('Пароль') }}
     </label>
 </div>
 
 <div class="mb-3">
-    <select class="form-select" aria-label="Default select example">
-        <option value="abitur" selected>
+    <select class="form-select" name="type" aria-label="Выберите тип аккаунта" required>
+        <option value="abiturient" selected>
             {{ __('Абитуриент') }}
+        </option>
+        <option value="student">
+            {{ __('Студент') }}
         </option>
         <option value="university">
             {{ __('Представитель ВУЗа') }}
+        </option>
+        <option value="moderator">
+            {{ __('Модератор') }}
         </option>
     </select>
 </div>

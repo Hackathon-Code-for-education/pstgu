@@ -6,14 +6,14 @@
 </h1>
 
 <div class="form-floating">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}" required>
     <label for="floatingInput">
         {{ __('Почта') }}
     </label>
 </div>
 
 <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" value="{{ old('password') }}" required>
     <label for="floatingPassword">
         {{ __('Пароль') }}
     </label>

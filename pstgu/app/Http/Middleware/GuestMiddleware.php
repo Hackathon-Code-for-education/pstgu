@@ -7,7 +7,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class AuthUserMiddleware
+class GuestMiddleware
 {
     /**
      * Handle an incoming request.
@@ -19,13 +19,11 @@ class AuthUserMiddleware
         $find = User::where('email', session('email'))->first();
 
         if ($find === null) {
-            return redirect()->route('signin');
+            return $next($request);
         }
 
         if ($find->verified != 1) {
             return redirect()->route('verified');
         }
-
-        return $next($request);
     }
 }
