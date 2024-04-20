@@ -8,7 +8,7 @@
         </div>
         <div class="d-flex">
             <div class="me-2">
-                <a href="{{ ('main.terms') }}">{{ __('Политика конфиденциальности') }}</a>
+                <a href="{{ route('main.terms') }}">{{ __('Политика конфиденциальности') }}</a>
             </div>
             <div class="">
                 <span>{{ __('RU') }}</span>

@@ -27,6 +27,7 @@ Route::prefix('/')->group(function () {
     Route::get('', [MainRouteController::class, 'index'])->name('main');
     Route::get('about', [MainRouteController::class, 'about'])->name('main.about');
     Route::get('faq', [MainRouteController::class, 'faq'])->name('main.faq');
+    Route::get('terms', [MainRouteController::class, 'terms'])->name('main.terms');
 });
 
 //

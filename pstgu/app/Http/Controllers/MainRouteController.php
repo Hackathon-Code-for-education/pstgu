@@ -20,4 +20,9 @@ class MainRouteController extends Controller
     {
         return view('main.faq');
     }
+
+    public function terms()
+    {
+        return view('main.terms');
+    }
 }
