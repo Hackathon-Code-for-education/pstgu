@@ -1,8 +1,8 @@
 @extends('layouts.base')
 
-@push('css')
+{{-- @push('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/user/index.css') }}" />
-@endpush
+@endpush --}}
 
 @section('body')
 <body>

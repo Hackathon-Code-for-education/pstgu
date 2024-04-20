@@ -17,7 +17,7 @@ class ViewController extends Controller
 
         $findUni = University::where('url', $uni)->firstOrFail();
 
-        $findImage = View::where('university', $findUni->id)->where('imageName', $name)->where('active', 1)->firstOrFail();
+        $findImage = View::where('university', $findUni->id)->where('image', $name)->where('active', 1)->firstOrFail();
 
         $type = $findImage->typeImage;
 

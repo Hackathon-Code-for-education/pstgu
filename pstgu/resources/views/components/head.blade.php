@@ -3,11 +3,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="icon" type="image/x-icon" href="{{ env("APP_URL") }}/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="{{ env("APP_URL") }}/favicon.svg">
-    <link rel="apple-touch-icon" href="{{ env("APP_URL") }}/favicon.svg">
-    <link rel="manifest" href="{{ env("APP_URL") }}/manifest.webmanifest">
-    <link rel="manifest" href="{{ env("APP_URL") }}/manifest.json">
+    {{-- <link rel="icon" type="image/x-icon" href="{{ env("APP_URL") }}/favicon.ico"> --}}
+    {{-- <link rel="icon" type="image/svg+xml" href="{{ env("APP_URL") }}/favicon.svg"> --}}
+    {{-- <link rel="apple-touch-icon" href="{{ env("APP_URL") }}/favicon.svg"> --}}
+    {{-- <link rel="manifest" href="{{ env("APP_URL") }}/manifest.webmanifest"> --}}
+    {{-- <link rel="manifest" href="{{ env("APP_URL") }}/manifest.json"> --}}
 
     <meta name="theme-color" content="#575FCF" />
     <meta name="description" content="{{ env("APP_DESC") }}">
@@ -42,10 +42,10 @@
         }
     </script>
 
-    <meta name="color-scheme" content="light dark">
+    {{-- <meta name="color-scheme" content="light dark"> --}}
 
-    <link rel="stylesheet" id="css.light" href="{{ asset('css/light/light.css') }}" media="(prefers-color-scheme: light)">
-    <link rel="stylesheet" id="css.dark" href="{{ asset('css/dark/dark.css') }}" media="(prefers-color-scheme: dark)">
+    {{-- <link rel="stylesheet" id="css.light" href="{{ asset('css/light/light.css') }}" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" id="css.dark" href="{{ asset('css/dark/dark.css') }}" media="(prefers-color-scheme: dark)"> --}}
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vars.css') }}" />

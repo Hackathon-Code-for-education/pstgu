@@ -18,6 +18,8 @@ return new class extends Migration
             $table->boolean('active')->default(true);
 
             $table->integer('university');
+
+            $table->string('image');
             $table->string('imageName');
             $table->string('typeImage');
         });

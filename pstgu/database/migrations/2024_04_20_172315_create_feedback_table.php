@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('universities', function (Blueprint $table) {
+        Schema::create('feedback', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
             $table->boolean('active')->default(true);
 
-            $table->string('name')->unique();
-            $table->string('nameShort')->unique();
+            $table->integer('university')->nullable();
+            $table->integer('user')->unique();
 
-            $table->text('desc')->nullable();
-
-            $table->string('url')->unique();
+            $table->string('title')->nullable();
+            $table->string('desc')->nullable();
+            $table->integer('rating')->nullable();
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('universities');
+        Schema::dropIfExists('feedback');
     }
 };
