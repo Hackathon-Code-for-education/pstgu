@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifiedController;
+use App\Http\Controllers\ExitUserController;
 use App\Http\Controllers\MainRouteController;
 use App\Http\Middleware\AuthUserMiddleware;
 use App\Http\Middleware\GuestMiddleware;
@@ -23,6 +24,8 @@ Route::prefix('/')->group(function () {
 //
 
 Route::get('verified', [VerifiedController::class, 'index'])->name('verified');
+
+Route::get('exit', [ExitUserController::class, 'index'])->name('exit');
 
 Route::middleware([GuestMiddleware::class])->group(function () {
     Route::get('signin', [LoginController::class, 'index'])->name('signin');

@@ -11,7 +11,7 @@
 <main class="form-signin w-100 m-auto">
     <form method="post" action="">
         <a href="{{ route('main') }}">
-            <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <img class="mb-4" src="{{ asset('img/logo.svg') }}" alt="" width="200">
         </a>
         @yield('sign')
         @csrf

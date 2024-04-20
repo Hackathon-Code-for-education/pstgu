@@ -5,6 +5,8 @@
     {{ __('Войти в аккаунт') }}
 </h1>
 
+<x-error />
+
 <div class="form-floating">
     <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}" required>
     <label for="floatingInput">

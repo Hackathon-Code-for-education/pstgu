@@ -25,5 +25,7 @@ class GuestMiddleware
         if ($find->verified != 1) {
             return redirect()->route('verified');
         }
+
+        return redirect()->route('user');
     }
 }

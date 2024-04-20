@@ -44,5 +44,7 @@ class RegisterController extends Controller
         ]);
 
         session(['email' => $validated['email']]);
+
+        return redirect()->route('user');
     }
 }
