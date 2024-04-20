@@ -6,7 +6,8 @@
 2. Скопировать 'pstgu/.env.example' и переименовать в '.env'
 3. Запустить Docker
 4. Выполнить команду 'cd pstgu && ./vendor/bin/sail up'
-5. Открыть http://localhost
+5. Выполнить команду './vendor/bin/sail tinker', затем выполнить команду 'migrate'
+6. Открыть http://localhost
 
 ## Стек
 
