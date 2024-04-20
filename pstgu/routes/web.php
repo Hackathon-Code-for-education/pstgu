@@ -46,4 +46,5 @@ Route::prefix('user')->middleware([AuthUserMiddleware::class])->group(function (
     Route::get('', [UserRouteController::class, 'index'])->name('user');
     Route::get('settings', [SettingsController::class, 'index'])->name('user.settings');
     Route::get('universities', [UnivertisiesController::class, 'index'])->name('user.universities');
+    Route::get('uni/{name}', [UnivertisiesController::class, 'show'])->name('user.uni');
 });
