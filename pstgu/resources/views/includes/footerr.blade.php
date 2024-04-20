@@ -7,10 +7,10 @@
             </a>
         </div>
         <div class="d-flex">
-            <div class="footer__privacy">
-                <a href="{{ ('main.terms.privacy') }}">{{ __('Политика конфиденциальности') }}</a>
+            <div class="me-2">
+                <a href="{{ ('main.terms') }}">{{ __('Политика конфиденциальности') }}</a>
             </div>
-            <div class="footer__language">
+            <div class="">
                 <span>{{ __('RU') }}</span>
             </div>
         </div>

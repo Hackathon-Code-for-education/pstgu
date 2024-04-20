@@ -13,15 +13,15 @@
                     <li><a href="{{ route('main.faq') }}" class="nav-link">{{ __('FAQ') }}</a></li>
                 </ul>
                 <ul class="nav col-12 col-lg-auto ms-lg-auto mb-md-0 header-content-links">
-                    @if(true)
+                    @if(false)
                     <li>
-                        <a href="{{ ('user') }}" class="link-body-emphasis text-decoration-none">
+                        <a href="{{ ('user') }}" class="nav-link text-decoration-none">
                             {{ __('Профиль') }}
                         </a>
                     </li>
                     @else
                     <li>
-                        <a href="{{ ('auth.signin') }}" class="nav-link link-secondary text-decoration-none">
+                        <a href="{{ route('signin') }}" class="nav-link text-decoration-none">
                             {{ __('Войти') }}
                         </a>
                     </li>
