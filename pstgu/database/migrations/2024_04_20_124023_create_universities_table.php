@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->boolean('active')->default(false);
+            $table->boolean('active')->default(true);
 
             $table->string('name')->unique();
             $table->string('nameShort')->unique();

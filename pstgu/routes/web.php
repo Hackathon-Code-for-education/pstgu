@@ -8,9 +8,16 @@ use App\Http\Controllers\MainRouteController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UnivertisiesController;
 use App\Http\Controllers\UserRouteController;
+use App\Http\Controllers\ViewController;
 use App\Http\Middleware\AuthUserMiddleware;
 use App\Http\Middleware\GuestMiddleware;
 use Illuminate\Support\Facades\Route;
+
+//
+// VIEW
+//
+
+Route::get('view/{uni}/{name}', [ViewController::class, 'index'])->name('view');
 
 //
 // MAIN
