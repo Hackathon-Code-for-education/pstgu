@@ -3,9 +3,10 @@
 ## Запуск
 
 1. Скопировать репозиторий
-2. Запустить Docker
-3. Выполнить команду 'cd pstgu && ./vendor/bin/sail up'
-4. Открыть http://localhost
+2. Скопировать 'pstgu/.env.example' и переименовать в '.env'
+3. Запустить Docker
+4. Выполнить команду 'cd pstgu && ./vendor/bin/sail up'
+5. Открыть http://localhost
 
 ## Стек
 
