@@ -16,7 +16,7 @@
             </div>
             <div class="col-9">
                 <div class="p-3">
-                    right
+                    @yield('user')
                 </div>
             </div>
         </div>

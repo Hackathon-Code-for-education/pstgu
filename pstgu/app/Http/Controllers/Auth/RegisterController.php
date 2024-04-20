@@ -38,9 +38,10 @@ class RegisterController extends Controller
             ]);
         }
 
-        $query = User::query()->create([
+        User::query()->create([
             'email' => $validated['email'],
             'password' => bcrypt($validated['password']),
+            'type' => $validated['type']
         ]);
 
         session(['email' => $validated['email']]);
