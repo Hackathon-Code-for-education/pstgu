@@ -1,5 +1,7 @@
 @extends('layouts.sign')
 
+@section('page.title', __('Войти в аккаунт'))
+
 @section('sign')
 <h1 class="h3 mb-3 fw-normal">
     {{ __('Войти в аккаунт') }}

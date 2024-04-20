@@ -1,5 +1,7 @@
 @extends('layouts.post')
 
+@section('page.title', __('Ответы на вопросы'))
+
 @section('main')
 <h1>
     {{ __('Информация') }}

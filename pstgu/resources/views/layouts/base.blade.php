@@ -31,7 +31,7 @@
     <meta name="googlebot" content="index,follow">
     <meta name="google" content="nositelinkssearchbox">
 
-    <title>@yield('page.title', config('app.name')) – {{ __('Аквариум') }}</title>
+    <title>@yield('page.title', config('app.name')) – {{ __('ABITU') }}</title>
 
     <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
     <script>

@@ -5,6 +5,9 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifiedController;
 use App\Http\Controllers\ExitUserController;
 use App\Http\Controllers\MainRouteController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\UnivertisiesController;
+use App\Http\Controllers\UserRouteController;
 use App\Http\Middleware\AuthUserMiddleware;
 use App\Http\Middleware\GuestMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -40,5 +43,7 @@ Route::middleware([GuestMiddleware::class])->group(function () {
 //
 
 Route::prefix('user')->middleware([AuthUserMiddleware::class])->group(function () {
-    Route::get('', [MainRouteController::class, 'index'])->name('user');
+    Route::get('', [UserRouteController::class, 'index'])->name('user');
+    Route::get('settings', [SettingsController::class, 'index'])->name('user.settings');
+    Route::get('universities', [UnivertisiesController::class, 'index'])->name('user.universities');
 });
