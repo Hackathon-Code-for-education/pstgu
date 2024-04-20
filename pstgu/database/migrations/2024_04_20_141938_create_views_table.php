@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('university');
 
             $table->string('image');
-            $table->string('imageName');
+            $table->text('imageName');
             $table->string('typeImage');
         });
     }

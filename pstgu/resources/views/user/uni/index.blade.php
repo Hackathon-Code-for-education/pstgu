@@ -50,13 +50,20 @@
         {{ __('Пока нет фотографий.') }}
     </p>
     @else
-    @foreach($photos as $photo)
-        @if($photo->typeImage == "image")
-        <a data-fancybox="university" data-src="{{ asset('img/view/' . $photo->imageName) }}">
-            <img src="{{ asset('img/view/' . $photo->imageName) }}" class="img-fluid w-25">
-        </a>
-        @endif
-    @endforeach
+    <div class="d-flex flex-wrap">
+        @foreach($photos as $photo)
+            @if($photo->typeImage == "image")
+            <div class="d-flex flex-column justify-content-center col-4">
+                <a data-fancybox="university" data-src="{{ asset('img/view/' . $photo->imageName) }}" class="mb-1">
+                    <img src="{{ asset('img/view/' . $photo->imageName) }}" class="img-fluid">
+                </a>
+                <a href="{{ route('view', [$uni->url, $photo->image]) }}">
+                    Открыть
+                </a>
+            </div>
+            @endif
+        @endforeach
+    </div>
     @endif
 </div>
 
@@ -71,9 +78,14 @@
     @else
     @foreach($photos as $photo)
         @if($photo->typeImage == "3d")
-        <a data-fancybox="university-3d" data-src="{{ asset('img/view/' . $photo->imageName) }}">
-            <img src="{{ asset('img/view/' . $photo->imageName) }}" class="img-fluid w-25">
-        </a>
+        <div style="position:relative;overflow:hidden;">
+            <iframe width="100%" height="500" src="{{ route('view', [$uni->url, $photo->image]) }}"></iframe>
+        </div>
+        @elseif($photo->typeImage == "yandex")
+        <div style="position:relative;overflow:hidden;">
+            <iframe src="https://yandex.ru/map-widget/v1/org/pravoslavny_svyato_tikhonovskiy_gumanitarny_universitet/1847360802/panorama/?ll=37.612962%2C55.772068&panorama%5Bdirection%5D=243.121722%2C73.389882&panorama%5Bfull%5D=true&panorama%5Bpoint%5D=37.612369%2C55.772133&panorama%5Bspan%5D=113.507663%2C60.000000&z=13" width="100%" height="500" frameborder="1" allowfullscreen="true" style="position:relative;">
+            </iframe>
+        </div>
         @endif
     @endforeach
     @endif
