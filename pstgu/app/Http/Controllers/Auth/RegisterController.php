@@ -14,6 +14,6 @@ class RegisterController extends Controller
 
     public function store()
     {
-        //
+        dd('123123');
     }
 }

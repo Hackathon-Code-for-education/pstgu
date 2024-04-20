@@ -22,4 +22,9 @@
 <button class="btn btn-primary w-100 py-2" type="submit">
     {{ __('Войти') }}
 </button>
+<p class="text-center mt-2">
+    <a href="{{ route('signup') }}">
+        {{ __('Регистрация') }}
+    </a>
+</p>
 @endsection
